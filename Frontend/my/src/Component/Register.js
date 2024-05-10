@@ -17,10 +17,7 @@ const Register = () => {
   
       console.log(userData, "- userdata")
   
-      function selectRole (event){
-          // console.log(event.target.value = "-role")
-       setUserData({...userData,["role"]: event.target.value})
-       }
+      
   
        const handleSubmit = async (event) => {
           event.preventDefault();

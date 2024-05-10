@@ -22,7 +22,6 @@ const handleSubmit = async (event) => {
           userData,
         });
   
-        // const response = await api.post("/login",{ userData });
         if (response.data.success) {
           dispatch({
             type: "LOGIN",

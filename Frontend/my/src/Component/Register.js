@@ -28,7 +28,6 @@ const Register = () => {
               if (userData.password === userData.confirmPassword) {
                   const response = await axios.post("http://localhost:8000/register", { userData });
   
-                  // const response = await api.post("/register", { userData });
                   if (response.data.success) {
                       setUserData({ name: "", email: "", password: "", confirmpassword: "", role: "Buyer" })
                       router('/login')

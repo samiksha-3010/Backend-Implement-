@@ -9,7 +9,7 @@ import { AuthContext } from './Context/Auth.context';
 
 const Register = () => {
       const {state} =useContext (AuthContext)
-       const [userData,setUserData] = useState({name: "",email: "",password: "",confirmPassword:"",role: "Buyer"})
+       const [userData,setUserData] = useState({name: "",email: "",password: "",confirmPassword:""})
        const router = useNavigate();
        const handleChange = (event) => {
           setUserData({ ...userData, [event.target.name]: event.target.value })
@@ -24,12 +24,12 @@ const Register = () => {
   
        const handleSubmit = async (event) => {
           event.preventDefault();
-          if (userData.name && userData.email && userData.password && userData.confirmPassword && userData.role) {
+          if (userData.name && userData.email && userData.password && userData.confirmPassword ) {
               if (userData.password === userData.confirmPassword) {
                   const response = await axios.post("http://localhost:8000/register", { userData });
   
                   if (response.data.success) {
-                      setUserData({ name: "", email: "", password: "", confirmpassword: "", role: "Buyer" })
+                      setUserData({ name: "", email: "", password: "", confirmpassword: "" })
                       router('/login')
                       toast.success(response.data.message)
                   } else {

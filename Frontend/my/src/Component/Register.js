@@ -51,15 +51,17 @@ const Register = () => {
    <div id='register-style'>
        <h2>Register</h2>
        <form onSubmit={handleSubmit}>
-           <label>Name</label><br/>
-           <input type='text' name= 'name' onChange={handleChange}/><br/>
-           <label>Email</label><br/>
-           <input type='email' name='email' onChange={handleChange}/><br/>
-           <label>Password</label><br/>
-           <input type='password' name='password' onChange={handleChange}/><br/>
-         <div id='button-type'> <input  type='submit' value='Register'/><br/></div>
-
-       </form>
+                <label>Name</label><br />
+                <input value={userData.name} type='text' name='name' onChange={handleChange} /><br />
+               
+                <label>Email</label><br />
+                <input value={userData.email} type='email' name='email' onChange={handleChange} /><br />
+                <label>Password</label><br />
+                <input type='password' name='password' onChange={handleChange} /><br />
+                <label>ConfirmPassword</label><br />
+                <input value={userData.confirmPassword} type='Password' name='confirmPassword' onChange={handleChange} /><br />
+                <input type='submit' value='Register' /><br />
+            </form>
    
 
    </div>

@@ -44,15 +44,29 @@ const handleSubmit = async (event) => {
     return(
         <div id="register-style">
         <h1>Login</h1>
-        <form onSubmit={handleSubmit}>
-            <label>Email</label><br/>
-            <input type="name" name='email' onChange={handleChange}/><br/>
-            <label>Password</label><br/>
-            <input type="password" name='password' onChange={handleChange}/><br/>
-           <div id="button-type"><input type='submit' value='Login'/><br/></div>
-           <button onClick={() => router("/register")}>Register</button>
-          
-        </form>
+        <form
+          onSubmit={handleSubmit}
+          >
+            <label>Enter your Email ID :</label>
+            <br />
+            <input
+              type="email"
+              name="email"
+              value={userData.email}
+              onChange={handleChange}
+            />
+            <br />
+            <label>Enter your Password :</label>
+            <br />
+            <input
+              type="password"
+              name="password"
+              value={userData.password}
+              onChange={handleChange}
+            />
+            <br />
+            <button>LOGIN</button>
+          </form>
          </div>
     )
 }

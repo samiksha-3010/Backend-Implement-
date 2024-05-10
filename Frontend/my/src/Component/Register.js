@@ -49,7 +49,6 @@ const Register = () => {
        <form onSubmit={handleSubmit}>
                 <label>Name</label><br />
                 <input value={userData.name} type='text' name='name' onChange={handleChange} /><br />
-               
                 <label>Email</label><br />
                 <input value={userData.email} type='email' name='email' onChange={handleChange} /><br />
                 <label>Password</label><br />
